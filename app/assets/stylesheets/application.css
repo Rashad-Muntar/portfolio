@@ -1,0 +1,393 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav{
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+nav .wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav .wrapper .brand{
+    font-weight: 900;
+    color: rgb(36, 36, 36);
+    font-size: 1.5em;
+}
+
+nav .wrapper a{
+    color: rgb(255, 80, 133);
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.header{
+    margin: 0;
+    width: 100vw;
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('header.png')
+}
+
+.header .content-wrapper{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+    margin-left: 70px;
+}
+
+.header .content-wrapper .content{
+    width: 45%;
+}
+
+.header .content-wrapper .content a{
+    background: rgb(255, 80, 133);
+    border-radius: 30px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 300ms;
+}
+
+.header .content-wrapper .content a:hover{
+    margin-left: 5px;
+}
+
+.header .content-wrapper .content span{
+    color: rgb(255, 80, 133);
+}
+
+.header .content-wrapper .quote{
+    width: 50%;
+}
+
+.header .content-wrapper .quote i{
+    color: gray;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-right: 5px;
+
+}
+
+.header .content-wrapper .name{
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.header .content-wrapper p{
+    padding: 0;
+    margin: 0;
+}
+
+.header .content-wrapper .title{
+    margin-bottom: 15px;
+}
+
+.my-works{
+    position: relative;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.project_card{
+    width: 31%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 3px solid white;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+.project_card:hover{
+    margin-top: 5px;
+}
+
+.project_card .details{
+    width: 100%;
+    background-color: white;
+    height: 20%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_title{
+    text-align: center;
+    border-bottom: 3px solid rgb(255, 80, 133);
+    width: 120px;
+    font-size: 1.3em;
+
+}
+
+.my-works .cards-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards-wrapper .first{
+    background-image: url("yolo.png");
+}
+
+.cards-wrapper .second{
+    background-image: url("zatix.png");
+}
+
+.cards-wrapper .third{
+    background-image: url("news.png");
+}
+
+.about_me{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.about_me .me{
+    width: 40%;
+}
+
+.about_me .resume{
+    background-color: rgb(255, 80, 133);
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.about_me .resume:hover{
+    margin-left: 5px;
+}
+
+.about_me .tools{
+    width: 50%;
+    margin-left: 100px;
+}
+
+.about_me .tools .title{
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.about_me .tools .items{
+    border-bottom: 1px solid rgb(189, 189, 189);
+    padding-bottom: 30px;
+}
+
+.about_me .tools .items span{
+    padding-right: 10px;
+    color: rgb(255, 80, 133);
+    
+}
+
+.contact_wrapper{
+    background: rgb(255, 80, 133);
+    border-top-left-radius: 70px;
+    padding: 10px 0;
+}
+
+.contact_wrapper > div{
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_wrapper .medium{
+    width: 45%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-top: 10%;
+}
+
+.contact_wrapper .medium > div{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.contact_wrapper .medium > div > div{
+   background-color: pink;
+   padding: 30px;
+   margin: 0 auto;
+   margin-right: 20px;
+   border-radius: 100%;
+
+}
+
+
+.contact_wrapper .medium > div > div i{
+    color: rgb(255, 80, 133);
+    font-size: 1.5em;
+ }
+
+.contact_wrapper .medium > div span{
+    font-size: 1.3em;
+    font-weight: 600;
+
+ }
+
+
+
+.contact_wrapper .contact{
+    width: 45%
+}
+
+.contact_wrapper .contact form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_wrapper .contact form button{
+    background: white;
+    height: 40px;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    font-weight: 700;
+}
+
+.contact_wrapper .contact form input{
+   border: none;
+   border-bottom: 2px solid white;
+   height: 40px;
+   margin: 10px 0;
+   padding: 0 10px;
+   border-radius: 10px;
+}
+
+.contact_wrapper .contact form input:focus{
+    outline: none;
+    background-color: rgb(253, 218, 228);
+ }
+
+ .contact_wrapper .contact form textarea:focus{
+    outline: none;
+    background-color: rgb(253, 218, 228);
+ }
+
+
+.contact_wrapper .contact form textarea{
+    border: none;
+    border-bottom: 2px solid white;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10 10px;
+    border-radius: 10px;
+ }
+
+ .chat_title{
+     color:white;
+     border-bottom: 3px solid white;
+ }
+
+
+ .cta{
+     color: white;
+ }
+
+ .card-title{
+     font-size: 1em;
+     margin-top: 20px;
+ }
+
+ @media screen and (max-width: 480px){
+
+    .my-works{
+        width: 95vw;
+    }
+
+    .project_card{
+        width: 100%;
+    }
+
+    .about_me{
+        width: 95vw;
+    }
+
+    .about_me .me{
+        width: 100%;
+    }
+    
+    .about_me .tools{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+
+    .contact_wrapper > div{
+        width: 95vw;
+        flex-direction: column;
+      }
+
+      .contact_wrapper .medium{
+        width: 100%;
+    }
+
+    .contact_wrapper .contact{
+        width: 100%
+    }
+
+    .header {
+        height: 55vh;
+    }
+
+    .header .content-wrapper {
+        width: 94%;
+        margin-left: 11px;
+    }
+
+ }
+
+
+
