@@ -1,11 +1,11 @@
-<section class="header">
+<section class="header" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
   <div class="content-wrapper">
 
-    <div class="content">
+    <div class="content" uk-scrollspy="cls:uk-animation-slide-left-medium; delay: 500; repeat: true">
       <p>Hi There! I am</p>
-      <p class="name"><span>Rashad</span> Muntar</p>
+      <p class="name uk-animation-slide-left-medium"><span>Rashad</span> Muntar</p>
       <p class="title">Full STACK WEB DEVELOPER</p>
-      <a href="">Contact me</a>
+      <a href="#contact" uk-scroll>Contact me</a>
     </div>
 
     <div class="quote"> 
@@ -18,7 +18,7 @@
   </div>
 </section>
 
-<section class="my-works">
+<section class="my-works" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
 
 <h2 class="section_title"> MY WORKS</h2>
 
@@ -27,8 +27,10 @@
       <div class="project_card first">
         <div class="details">
           <div>
-          <h3>Yollo</h3>
+          <h3 class="card-title">Yollo</h3>
           </div>
+          <span>ruby</span>
+          <span>javascript</span>
           <div>
             <a href=""><i class="fas fa-globe"></i></a>
             <a href=""><i class="fab fa-github"></i></a>
@@ -39,8 +41,10 @@
       <div class="project_card second">
         <div class="details">
           <div>
-          <h3>Zattis Ecommerce</h3>
+          <h3 class="card-title">Zattis Ecommerce</h3>
           </div>
+          <span>HTML5</span>
+          <span>CSS3</span>
           <div>
             <a href=""><i class="fas fa-globe"></i></a>
             <a href=""><i class="fab fa-github"></i></a>
@@ -49,11 +53,13 @@
         </div>
       </div>
 
-    <div class="project_card third">
+    <div class="project_card third" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
       <div class="details">
         <div>
-        <h3>News Week</h3>
+        <h3 class="card-title">News Week</h3>
         </div>
+        <span>HTM5</span>
+        <span>CSS3</span>
         <div>
           <a href=""><i class="fas fa-globe"></i></a>
           <a href=""><i class="fab fa-github"></i></a>
@@ -66,7 +72,7 @@
 </section>
 
 
-<section class="about_me">
+<section class="about_me" uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 500">
   <div class="me">
     <h2 class="section_title">About me</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat iste porro voluptate, ipsum eaque, necessitatibus, maxime eveniet in obcaecati consequatur ipsam quisquam commodi praesentium a? Delectus voluptate omnis inventore!</p>
@@ -113,11 +119,11 @@
   
 </section>
 
-<section class="contact_wrapper">
+<section class="contact_wrapper" id="contact" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
   <div>
   <div class="contact">
   <h3 class=" chat_title">Lets chat</h3>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem fugit voluptates illo culpa deserunt corrupti animi voluptatibus id ratione ex, consequuntur eligendi alias error nemo officia, voluptatem mollitia. Incidunt, velit!</p>
+  <p class="cta">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem fugit voluptates illo culpa deserunt corrupti animi voluptatibus id ratione ex, consequuntur eligendi alias error nemo officia, voluptatem mollitia. Incidunt, velit!</p>
     <form action="">
       <input type="text" placeholder="Enter your name">
       <input type="email" placeholder="Enter your email">
