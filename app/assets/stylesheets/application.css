@@ -29,6 +29,7 @@ nav{
 nav .wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
 }
@@ -37,12 +38,21 @@ nav .wrapper .brand{
     font-weight: 900;
     color: white;
     font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 nav .wrapper .brand span{
     font-weight: 900;
     color: #3EB489;
     font-size: 2em;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav .wrapper a i{
@@ -128,6 +138,7 @@ nav .wrapper .head-icon{
     padding: 7px 15px;
     color: #212121;
     border-radius: 7px;
+    font-weight: 600;
 }
 
 .header .content-wrapper .title{
@@ -362,7 +373,64 @@ nav .wrapper .head-icon{
      margin-top: 20px;
  }
 
+ @media screen and (max-width: 768px){
+    .header .content-wrapper .name{
+        font-size: 2.3em;
+        line-height: 1em;
+    }
+    
+    .header .content-wrapper {
+        margin-left: 40px;
+    }
+    
+    .header{
+        min-height: 320px;
+    }
+
+ }
+
  @media screen and (max-width: 480px){
+
+    nav{
+        margin-top: 0;
+        padding-top: 0;
+        height: 40px;
+    }
+
+   
+    nav .wrapper{
+        margin-top: 0;
+        padding-top: 0;
+        height: 100%;
+        width: 95%;
+        position: relative;
+    }
+
+    
+.header{
+    min-height: 280px;
+    background-image: url('back2.png')
+}
+
+.header .content-wrapper .quote{
+    display: none;
+}
+
+
+.header .content-wrapper .title{
+    font-size: 0.8em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+    .header .content-wrapper .name{
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    .header .content-wrapper #contact-btn{
+        margin-top: 20px;
+    }
 
     .my-works{
         width: 95vw;
