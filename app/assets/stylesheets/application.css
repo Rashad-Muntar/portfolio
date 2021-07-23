@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #262626;
 }
 
 nav{
@@ -150,6 +151,8 @@ nav .wrapper .head-icon{
     width: 80vw;
     margin: 0 auto;
     margin-top: 50px;
+    background-color: #262626;
+    height: 100vh;
 }
 
 .project_card{
@@ -181,11 +184,25 @@ nav .wrapper .head-icon{
 }
 
 .section_title{
-    text-align: center;
-    border-bottom: 3px solid rgb(255, 80, 133);
-    width: 120px;
-    font-size: 1.3em;
+    border-bottom: 3px solid #3EB489;
+    font-size: 1.8em;
+    color: rgb(221, 221, 221);
+    margin: 35px 0;
+    padding: 10px;
+    font-weight: 900;
+}
 
+.profile-txt{
+    color: rgb(221, 221, 221);
+    margin-bottom: 35px;
+}
+
+.projects-title{
+    width: 400px;  
+}
+
+.about-me-title{
+    width: 150px;
 }
 
 .my-works .cards-wrapper{
@@ -222,7 +239,7 @@ nav .wrapper .head-icon{
 }
 
 .about_me .resume{
-    background-color: rgb(255, 80, 133);
+    background-color: #3EB489;
     border-radius: 50px;
     color: white;
     font-weight: 600;
@@ -243,6 +260,7 @@ nav .wrapper .head-icon{
 .about_me .tools .title{
     font-weight: 700;
     padding-bottom: 10px;
+    color: #3EB489;
 }
 
 .about_me .tools .items{
@@ -252,14 +270,14 @@ nav .wrapper .head-icon{
 
 .about_me .tools .items span{
     padding-right: 10px;
-    color: rgb(255, 80, 133);
+    color: rgb(221, 221, 221);
     
 }
 
 .contact_wrapper{
-    background: rgb(255, 80, 133);
-    border-top-left-radius: 70px;
-    padding: 10px 0;
+    background: #202020;
+    border-top: 3px solid #3EB489;
+    padding: 60px 0;
 }
 
 .contact_wrapper > div{
@@ -271,45 +289,42 @@ nav .wrapper .head-icon{
 
 .contact_wrapper .medium{
     width: 45%;
-    background-color: white;
+    background-color: rgb(29, 29, 29);
     border-radius: 20px;
-    display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    padding-top: 10%;
+    padding-top: 5%;
+    transition: 500ms;
 }
 
-.contact_wrapper .medium > div{
+.contact_wrapper .medium:hover{
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    margin-top: 5px;
+}
+
+
+
+.contact_wrapper .medium .con{
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    width: 70%;
     align-items: center;
     margin-bottom: 20px;
-
+    background-color: #262626;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: gray;
 }
 
-.contact_wrapper .medium > div > div{
-   background-color: pink;
-   padding: 30px;
-   margin: 0 auto;
-   margin-right: 20px;
-   border-radius: 100%;
-
+.contact_wrapper .medium .con i{
+    font-size: 1.7em;
 }
 
-
-.contact_wrapper .medium > div > div i{
-    color: rgb(255, 80, 133);
-    font-size: 1.5em;
- }
-
-.contact_wrapper .medium > div span{
-    font-size: 1.3em;
-    font-weight: 600;
-
- }
-
-
+.contact_wrapper .medium .con span{
+    color: #3EB489;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-left: 15px;
+}
 
 .contact_wrapper .contact{
     width: 45%
@@ -352,7 +367,7 @@ nav .wrapper .head-icon{
 .contact_wrapper .contact form textarea{
     border: none;
     border-bottom: 2px solid white;
-    height: 100px;
+    height: 70px;
     margin: 10px 0;
     padding: 10 10px;
     border-radius: 10px;
