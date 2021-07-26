@@ -10,133 +10,276 @@
 
     <div class="quote"> 
       <p>I am a software engineer specialized in frontend, backend and TDD for complete scalable web apps. </p>
-      <a href="https://www.linkedin.com/in/rashad-muntar/" target="blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://twitter.com/RashadToure" target="blank"><i class="fab fa-twitter-square"></i></a>
-      <a href="https://github.com/Rashad-Muntar" target="blank"><i class="fab fa-github-square"></i></a>
     </div>
 
   </div>
 </section>
 
-<section class="my-works" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
-
-<h2 class="section_title projects-title"> My Masterpiece Collection</h2>
+<section id="my-projects" class="main" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
+<h2 class="section_title projects-title">My Awesome projects</h2>
 
   <div class="cards-wrapper">
-  
-      <div class="project_card first">
-        <div class="details">
-          <div>
-          <h3 class="card-title">Yollo</h3>
+    <div class="top-cards-wrapper">
+       <div id="top-main" class="cards">
+          <div class="overlay">
+            <div>
+            <h3 class="title">Weather Guide</h3>
+            <p>- HTML5</p>
+            <p>- CSS3</p>
+            <p>- Javascript</p>
           </div>
-          <span>ruby</span>
-          <span>javascript</span>
+
+          <div class="btns">
+            <a href="https://github.com/Rashad-Muntar/weather--app.git" target="blank"><i class="fab fa-github"></i></a>
+            <a href="https://rashad-muntar.github.io/weather--app/" target="blank"><i class="fas fa-globe"></i></a>
+          </div>
+          <a class="details" href="#main-top-modal" uk-toggle>more</a>
+        </div>
+          <%= image_tag "weather.png", class: "main-img" %>
+      </div>
+
+        <div id="subs-wrapper">
+          <div class="subs cards">
+              <div class="overlay"> 
+                <div>
+                  <h3 class="title">Local Stayz</h3>
+                  <p>- HTML5</p>
+                  <p>- CSS3</p>
+                  <p>- Javascript</p>
+                </div>
+
+                <div class="btns">
+                  <a href="https://github.com/Rashad-Muntar/localStays.git" target="blank"><i class="fab fa-github"></i></a>
+                  <a href="https://pacific-falls-94441.herokuapp.com/home" target="blank"><i class="fas fa-globe"></i></a>
+                </div>
+                <a class="details" href="#subs-one" uk-toggle>more</a>
+              </div>
+            <%= image_tag "local.jpg", class: "main-img" %>
+          </div>
+
+
+          <div class="subs cards">
+            <div class="overlay"> 
+              <div>
+                <h3 class="title">Skyman Game</h3>
+                <p>- HTML5</p>
+                <p>- CSS3</p>
+                <p>- Phaser 3</p>
+              </div>
+
+              <div class="btns">
+                <a href="https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE.git" target="blank"><i class="fab fa-github"></i></a>
+                <a href="https://compassionate-poitras-076608.netlify.app/" target="blank"><i class="fas fa-globe"></i></a>
+              </div>
+              <a class="details" href="#subs-two" uk-toggle>more</a>
+            </div>
+            <%= image_tag "game.png", class: "main-img" %>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="down-cards-wrapper">
+      <div class="down-cards cards">
+        <div class="overlay"> 
           <div>
+            <h3 class="title">Yollo Life Style</h3>
+            <p>- HTML5</p>
+            <p>- CSS3</p>
+            <p>- Ruby on Rails</p>
+          </div>
+
+          <div class="btns">
+            <a href="https://github.com/Rashad-Muntar/LifeStye-Article.git" target="blank"><i class="fab fa-github"></i></a>
             <a href="https://fierce-fortress-27372.herokuapp.com/" target="blank"><i class="fas fa-globe"></i></a>
-            <a href="https://github.com/Rashad-Muntar/ror-capstone" target="blank"><i class="fab fa-github"></i></a>
           </div>
+          <a class="details" href="#down-one" uk-toggle>more</a>
         </div>
+          <%= image_tag "article.png", class: "main-img" %>
       </div>
 
-      <div class="project_card second">
-        <div class="details">
+      <div class="down-cards cards">
+          <div class="overlay"> 
           <div>
-          <h3 class="card-title">Zattis Ecommerce</h3>
+            <h3 class="title">Zattix</h3>
+            <p>- HTML5</p>
+            <p>- CSS3</p>
+            <p>- Bootstrap</p>
           </div>
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <div>
-            <a href="https://rashad-muntar.github.io/Capstone1-Ecommerce/" target="blank"><i class="fas fa-globe"></i></a>
-            <a href="https://github.com/Rashad-Muntar/Capstone1-Ecommerce" target="blank"><i class="fab fa-github"></i></a>
-          </div>
-          
-        </div>
-      </div>
 
-    <div class="project_card third" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
-      <div class="details">
-        <div>
-        <h3 class="card-title">News Week</h3>
+          <div class="btns">
+            <a href="https://github.com/Rashad-Muntar/LifeStye-Article.git" target="blank"><i class="fab fa-github"></i></a>
+            <a href="https://fierce-fortress-27372.herokuapp.com/" target="blank"><i class="fas fa-globe"></i></a>
+          </div>
+          <a class="details" href="#down-two" uk-toggle>more</a>
         </div>
-        <span>HTM5</span>
-        <span>CSS3</span>
-        <div>
-          <a href="https://rashad-muntar.github.io/NEWS-WEEK-CLONE/" target="blank"><i class="fas fa-globe"></i></a>
-          <a href="https://github.com/Rashad-Muntar/NEWS-WEEK-CLONE" target="blank"><i class="fab fa-github"></i></a>
-        </div>
+        <%= image_tag "zattix.png", class: "main-img" %>
+      
       </div>
     </div>
 
   </div>
+</section
 
-</section>
 
-
-<section class="about_me" uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 500">
-  <div class="me">
-    <h2 class="section_title about-me-title">About me</h2>
-    <p class="profile-txt"> I have a passion for transforming business ideas into beautiful web applications. I have built everything in the full-stack curriculum from landing pages with excellent UI to JavaScript and Rails APIs. I have pair-programed with different developers around the world working remotely.</p>
-    <a href="" class="resume">Get my resume</a>
-  </div>
-
-  <div class="tools">
-      <div>
-        <h3 class="title">Languages</h3>
-        <div class="items">
-          <span>Javascript(ES5 | ES6)</span> ||
-          <span>Ruby</span> ||
-          <span>C++</span> ||
-          <span>HTML</span> ||
-          <span>CSS</span>
-        </div>  
+<section class="about_me main" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
+  <div class="about-me-wrapper">
+      <div class="me">
+        <h2 class="section_title about-me-title">About me</h2>
+        <p class="profile-txt"> I have a passion for transforming business ideas into beautiful web applications. I have built everything in the full-stack curriculum from landing pages with excellent UI to JavaScript and Rails APIs. I have pair-programed with different developers around the world working remotely.</p>
       </div>
 
-      <div>
-      <h3 class="title">Frameworks</h3>
-      <div class="items">
-        <span>Ruby on Rails</span> ||
-        <span>React</span> ||
-        <span>Node.js</span> ||
-        <span>Bootstrap</span> ||
-        <span>UIKIT</span> ||
-        <span>Semantic UI</span>
-      </div>  
-    </div>
+      <div class="tools">
+          <div>
+            <h3 class="title">Languages</h3>
+            <div class="items">
+              <span>Javascript(ES5 | ES6)</span> ||
+              <span>Ruby</span> ||
+              <span>C++</span> ||
+              <span>HTML</span> ||
+              <span>CSS</span>
+            </div>  
+          </div>
 
-    <div>
-    <h3 class="title">Tools</h3>
-    <div class="items">
-      <span>Git</span> ||
-      <span>Github</span> ||
-      <span>Rspec</span> ||
-      <span>Selenium</span> ||
-      <span>Capybara</span> ||
-      <span>Jest</span> 
-    </div>  
-  </div>
+          <div>
+            <h3 class="title">Frameworks</h3>
+            <div class="items">
+              <span>Ruby on Rails</span> ||
+              <span>React</span> ||
+              <span>Node.js</span> ||
+              <span>Bootstrap</span> ||
+              <span>UIKIT</span> ||
+              <span>Semantic UI</span>
+            </div>  
+          </div>
 
+
+        <div>
+          <h3 class="title">Tools</h3>
+          <div class="items">
+            <span>Git</span> ||
+            <span>Github</span> ||
+            <span>Rspec</span> ||
+            <span>Selenium</span> ||
+            <span>Capybara</span> ||
+            <span>Jest</span> 
+          </div>  
+        </div>
+
+
+
+      </div>
   </div>
-  
 </section>
 
-<section class="contact_wrapper" id="contact" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
+
+<section class="contact_wrapper main" id="contact" uk-scrollspy="cls:uk-animation-fade; delay: 300; repeat: true">
   <div>
   <div class="contact">
-  <h3 class=" chat_title">Lets chat</h3>
-  <p class="cta">Looking for great developer? lets schedule a ZOOM chat or send me and email using this form or any of my social media linkes provided. I will gladly respond to you as soon as possible</p>
-    <form action="">
-      <input type="text" placeholder="Enter your name">
-      <input type="email" placeholder="Enter your email">
-      <textarea placeholder="Type your message here..."></textarea>
-      <button>Send</button>
-    </form>
+  <h3 class="section_title">Lets chat</h3>
+  <p class="cta">Looking for great developer? lets schedule a ZOOM chat or send me an email using my social media linkes provided. I will gladly respond to you as soon as possible</p>
   </div>
 
     <div class="medium">
         <a href="tel:+233 246 949 634" class="con"><i class="fas fa-phone"></i> <span>+233 246 949 634</span> </a>
-        <a href="mailto:muntartoure5@gmail.co" class="con"> <i class="far fa-envelope"></i> <span>muntartoure5@gmail.com</span></a>
+        <a href="mailto:rashadmuntar5@gmail.com" class="con"> <i class="far fa-envelope"></i> <span>rashadmuntar5@gmail.com</span></a>
         <a href="https://www.linkedin.com/in/rashad-muntar/" target="blank" class="con"><i class="fab fa-linkedin-in"> </i> <span>linkedin</span></a>
         <a href="https://twitter.com/RashadToure" target="blank" class="con"><i class="fab fa-twitter"></i> <span>twitter</span></a>
     <div>
   </div>
 </section>
+
+
+<div id="main-top-modal" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+            <div class="uk-background-cover main-model" uk-height-viewport></div>
+            <div class="uk-padding-large">
+                <p>About
+                This application was built using HTML5, CSS3, vanilla Javascript and webpack This application fetches the current weather of a city or at any desired location. User is able to toggle between temperature Units</p>
+                <div class="model-btns">
+                <a href="https://github.com/Rashad-Muntar/weather--app.git" target="blank"><i class="fab fa-github"></i></a>
+                <a href="https://rashad-muntar.github.io/weather--app/" target="blank"><i class="fas fa-globe"></i></a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div
+
+<a class="uk-button uk-button-default" href="#modal-full" uk-toggle></a>
+
+<div id="subs-one" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+            <div class="uk-background-cover first-sub" uk-height-viewport></div>
+            <div class="uk-padding-large">
+                <p>This is a real estate Website. It allows users to find available properties for rent User is able to sign up, have a dashboard, and sought for properties. Used Node.Js</p>
+                <div class="model-btns">
+                  <a href="https://github.com/Rashad-Muntar/localStays.git" target="blank"><i class="fab fa-github"></i></a>
+                  <a href="https://pacific-falls-94441.herokuapp.com/home" target="blank"><i class="fas fa-globe"></i></a>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+<a class="uk-button uk-button-default" href="#modal-full" uk-toggle></a>
+
+<div id="subs-two" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+            <div class="uk-background-cover second-sub" uk-height-viewport></div>
+            <div class="uk-padding-large">
+                <p>A phaser 3 platform game. At the start of the game, the player enters his name. The player is then redirected to the game menu, the player can click play or any of the options provided. The player will be taken to the game main scene if the play button is clicked where there are platforms which is arranged randomely. The player needs to consume all the star on the platforms by jumping and and walking</p>
+                <div class="model-btns">
+                <a href="https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE.git" target="blank"><i class="fab fa-github"></i></a>
+                <a href="https://compassionate-poitras-076608.netlify.app/" target="blank"><i class="fas fa-globe"></i></a>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+<a class="uk-button uk-button-default" href="#modal-full" uk-toggle></a>
+
+<div id="down-one" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+            <div class="uk-background-cover down-one" uk-height-viewport></div>
+            <div class="uk-padding-large">
+                <p>This a rails app that allow users to signup and login. The signed up user can create an article which is associated to the user's account and it is associated to a category. User is able to vote an article and user is able to bookmark the article as well. Built with Ruby on Rails 6</p>
+                <div class="model-btns">
+                <a href="https://github.com/Rashad-Muntar/LifeStye-Article.git" target="blank"><i class="fab fa-github"></i></a>
+                <a href="https://fierce-fortress-27372.herokuapp.com/" target="blank"><i class="fas fa-globe"></i></a>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+<a class="uk-button uk-button-default" href="#modal-full" uk-toggle></a>
+
+<div id="down-two" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+            <div class="uk-background-cover down-two" uk-height-viewport></div>
+            <div class="uk-padding-large">
+                <p>An Ecommerce Website that allows users to buy and sell new and used items. The user is able to list items. HTML, CSS, Bootstrap, and Glide is the main technology used.</p>
+                <div class="model-btns">
+                <a href="https://github.com/Rashad-Muntar/LifeStye-Article.git" target="blank"><i class="fab fa-github"></i></a>
+                <a href="https://fierce-fortress-27372.herokuapp.com/" target="blank"><i class="fas fa-globe"></i></a>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+

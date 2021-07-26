@@ -14,16 +14,15 @@
  *= require_self
  */
 
- body{
+  body{
     font-family: 'Noto Sans JP', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    width: 100vw;
     background-color: #262626;
 }
 
+
 nav{
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: 1;
 }
@@ -63,12 +62,21 @@ nav .wrapper a i{
 }
 
 nav .wrapper .head-icon{
-    color: white;
+    color: rgb(214, 214, 214);
+    font-size: 1.5em;
+    margin-left: 13px;
+    transition: 300ms;
+}
+
+nav .wrapper .head-icon:hover{
+    color: #3EB489;
+    font-size: 1.5em;
+    margin-left: 13px;
 }
 
 .header{
     margin: 0;
-    width: 100vw;
+    width: 100%;
     height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -146,50 +154,154 @@ nav .wrapper .head-icon{
     margin-bottom: 15px;
 }
 
-.my-works{
-    position: relative;
+.main{
+    margin-top: 100px !important;
+}
+
+#my-projects{
     width: 80vw;
     margin: 0 auto;
-    margin-top: 50px;
-    background-color: #262626;
-    height: 100vh;
+
 }
 
-.project_card{
-    width: 31%;
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    border: 3px solid white;
-    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-    border-radius: 10px;
-    transition: 300ms;
+
+#my-projects .cards-wrapper{
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.project_card:hover{
-    margin-top: 5px;
-}
-
-.project_card .details{
-    width: 100%;
-    background-color: white;
-    height: 20%;
+#my-projects .cards-wrapper .content{
     position: absolute;
-    bottom: 0px;
+    z-index: 3;
+    color: white;
+    align-self: start;
+}
+
+#my-projects .top-cards-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 48%;
+}
+
+#my-projects .top-cards-wrapper #top-main{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cards .overlay{
+    background-color: rgb(29, 29, 29);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    color: white;
+    padding: 70px 30px;
+    box-sizing: border-box;
+    transition: 700ms;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards .overlay:hover{
+    width: 100%;
+}
+
+.cards .overlay:hover .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ .cards .overlay .title{
+   color:  #3EB489;
+   font-weight: 700; 
+}
+
+.cards .overlay .btns{
+   display: none;
+ }
+
+ .cards .overlay .btns a{
+    font-size: 2em;
+    color: #3EB489;
+    margin-right: 10px;
+  }
+
+  .cards .overlay .btns a:hover{
+    color: rgb(221, 221, 221);
+  }
+
+.overlay p{
+    font-size: 0.8em; 
+ }
+
+#my-projects .top-cards-wrapper #top-main img{
+    width: 80%;
+}
+
+#my-projects #subs-wrapper{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+
+#my-projects #subs-wrapper .subs{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects #subs-wrapper .subs img{
+    width: 45%;
+    height: 90%;
+}
+
+#my-projects .down-cards-wrapper{
+    height: 49%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#my-projects .down-cards-wrapper > div{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects .down-cards-wrapper > div img{
+    width: 80%;
+}
+
+#my-projects .cards-wrapper .cards{
+    background-color: #202020;
+    position: relative;
 }
 
 .section_title{
     border-bottom: 3px solid #3EB489;
     font-size: 1.8em;
     color: rgb(221, 221, 221);
-    margin: 35px 0;
+    margin: 0 0;
     padding: 10px;
     font-weight: 900;
+    margin-bottom: 50px;
 }
 
 .profile-txt{
@@ -198,86 +310,46 @@ nav .wrapper .head-icon{
 }
 
 .projects-title{
-    width: 400px;  
+    width: 320px;  
 }
 
 .about-me-title{
     width: 150px;
 }
 
-.my-works .cards-wrapper{
+.about-me-wrapper{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.cards-wrapper .first{
-    background-image: url("yolo.png");
-}
-
-.cards-wrapper .second{
-    background-image: url("zatix.png");
-}
-
-.cards-wrapper .third{
-    background-image: url("news.png");
-}
-
-.about_me{
-    display: flex;
-    justify-content: space-between;
     width: 80vw;
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    position: relative;
+    justify-content: space-between;
+    margin-top: 100px;
     flex-wrap: wrap;
 }
 
-.about_me .me{
-    width: 40%;
+.about-me-wrapper .me{
+    width: 45%;
 }
 
-.about_me .resume{
-    background-color: #3EB489;
-    border-radius: 50px;
-    color: white;
-    font-weight: 600;
-    padding: 10px 15px;
-    text-decoration: none;
-    transition: 300ms;
-}
-
-.about_me .resume:hover{
-    margin-left: 5px;
-}
-
-.about_me .tools{
-    width: 50%;
+.about-me-wrapper .tools{
+    width: 53%;
     margin-left: 100px;
 }
 
-.about_me .tools .title{
+.about-me-wrapper .tools .title{
     font-weight: 700;
     padding-bottom: 10px;
     color: #3EB489;
 }
 
-.about_me .tools .items{
+.about-me-wrapper .tools .items{
     border-bottom: 1px solid rgb(189, 189, 189);
     padding-bottom: 30px;
 }
 
-.about_me .tools .items span{
+.about-me-wrapper .tools .items span{
     padding-right: 10px;
     color: rgb(221, 221, 221);
     
-}
-
-.contact_wrapper{
-    background: #202020;
-    border-top: 3px solid #3EB489;
-    padding: 60px 0;
 }
 
 .contact_wrapper > div{
@@ -285,6 +357,8 @@ nav .wrapper .head-icon{
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .contact_wrapper .medium{
@@ -293,7 +367,9 @@ nav .wrapper .head-icon{
     border-radius: 20px;
     flex-direction: column;
     padding-top: 5%;
+    padding-bottom: 5%;
     transition: 500ms;
+    height: 300px;
 }
 
 .contact_wrapper .medium:hover{
@@ -310,7 +386,7 @@ nav .wrapper .head-icon{
     align-items: center;
     margin-bottom: 20px;
     background-color: #262626;
-    padding: 10px 30px;
+    padding: 13px 30px;
     text-decoration: none;
     color: gray;
 }
@@ -327,7 +403,8 @@ nav .wrapper .head-icon{
 }
 
 .contact_wrapper .contact{
-    width: 45%
+    width: 45%;
+    margin-bottom: 30px
 }
 
 .contact_wrapper .contact form{
@@ -361,6 +438,7 @@ nav .wrapper .head-icon{
  .contact_wrapper .contact form textarea:focus{
     outline: none;
     background-color: rgb(253, 218, 228);
+    
  }
 
 
@@ -369,7 +447,7 @@ nav .wrapper .head-icon{
     border-bottom: 2px solid white;
     height: 70px;
     margin: 10px 0;
-    padding: 10 10px;
+    padding: 10px 10px;
     border-radius: 10px;
  }
 
@@ -381,11 +459,69 @@ nav .wrapper .head-icon{
 
  .cta{
      color: white;
+     font-size: 1.2em;
  }
 
  .card-title{
      font-size: 1em;
      margin-top: 20px;
+ }
+
+
+ footer{
+     background-color: rgb(182, 182, 182);
+     width: 100%;
+     height: 50px;
+     color: #262626;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     letter-spacing: 3px;
+     font-weight: 600;
+ }
+
+ @media screen and (min-width: 1024px){
+    .about-me-wrapper .me{
+        width: 45%;
+    }
+
+    .about-me-wrapper .tools{
+        width: 50%;
+        margin-left: 50px;
+    }
+ }
+
+ @media screen and (max-width: 1024px){
+     .header{
+         min-height: 450px;
+     }
+
+     .about-me-wrapper{
+        width: 90vw;
+    }
+
+    .about-me-wrapper .tools{
+        width: 47%;
+        margin-left: 50px;
+    }
+
+    #my-projects{
+        width: 90vw;
+    }
+
+    .contact_wrapper > div {
+        width: 90vw;
+    }
+
+    .contact_wrapper .medium .con i{
+        font-size: 1.5em;
+    }
+
+    .contact_wrapper .medium .con span{
+        font-size: 1.2em;
+        margin-left: 15px;
+    }
+
  }
 
  @media screen and (max-width: 768px){
@@ -402,6 +538,76 @@ nav .wrapper .head-icon{
         min-height: 320px;
     }
 
+    #my-projects{
+        width: 95vw;
+    }
+
+    .overlay p{
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0; 
+     }
+
+     #my-projects #subs-wrapper .subs img{
+        width: 70%;
+        height: 95;
+    }
+
+    #my-projects .top-cards-wrapper #top-main img{
+        width: 97%;
+    }
+
+    #my-projects .down-cards-wrapper > div img{
+        width: 97%;
+    }
+
+    .about-me-wrapper  {
+        width: 95vw;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .about-me-wrapper .me{
+        width: 45%;
+    }
+
+    .about-me-wrapper  .tools .title{
+        padding-bottom: 0;
+    }
+
+    .about-me-wrapper  .tools .items {
+        padding-bottom: 10px;
+    }
+
+    .about-me-wrapper  .tools{
+        margin-left: 30px;
+    }
+
+    .about-me-wrapper  .tools{
+        width: 50%;
+    }
+
+    .contact_wrapper > div {
+        width: 95vw;
+    }
+
+    .contact_wrapper .medium{
+        width: 48%;
+        height: 300px;
+    }
+
+    .contact_wrapper .medium .con i{
+        font-size: 1.3em;
+    }
+
+    .contact_wrapper .medium .con span{
+        font-size: 1em;
+        margin-left: 15px;
+    }
+
+    .cta{
+       font-size: 1em;
+    }
  }
 
  @media screen and (max-width: 480px){
@@ -412,6 +618,9 @@ nav .wrapper .head-icon{
         height: 40px;
     }
 
+    .main{
+        margin-top: 50px !important;
+    }
    
     nav .wrapper{
         margin-top: 0;
@@ -423,7 +632,7 @@ nav .wrapper .head-icon{
 
     
 .header{
-    min-height: 280px;
+    min-height: 300px;
     background-image: url('back2.png')
 }
 
@@ -447,29 +656,90 @@ nav .wrapper .head-icon{
         margin-top: 20px;
     }
 
-    .my-works{
+    .about-me-wrapper {
         width: 95vw;
     }
 
-    .project_card{
-        width: 100%;
-    }
-
-    .about_me{
-        width: 95vw;
-    }
-
-    .about_me .me{
+    .about-me-wrapper  .me{
         width: 100%;
     }
     
-    .about_me .tools{
+    .about-me-wrapper  .tools{
         width: 100%;
         margin-left: 0;
         margin-top: 40px;
     }
 
+    .section_title{
+        font-size: 1.4em;
+        padding: 10px 0;
+        font-weight: 900;
+    }
+    
+    .projects-title{
+        width: 250px;  
+    }
 
+    #my-projects .top-cards-wrapper{
+        flex-direction: column
+    }
+
+    #my-projects .cards-wrapper{
+        height: auto;
+        flex-direction: column
+    }
+
+    #my-projects #subs-wrapper{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #my-projects #subs-wrapper .subs{
+        height: 230px;
+        margin-bottom: 10px;
+    }
+
+    #my-projects #subs-wrapper .subs img{
+        width: 95%;
+    }
+
+    #my-projects .top-cards-wrapper #top-main{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #my-projects .top-cards-wrapper #top-main img{
+        width: 95%;
+    }
+
+    #my-projects .down-cards-wrapper{
+        flex-direction: column
+    }
+
+    #my-projects .down-cards-wrapper > div{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #my-projects .down-cards-wrapper > div img{
+        width: 95%;
+    }
+
+    #my-projects{
+        width: 95vw;
+    }
+
+    .cards .overlay .title{
+        color:  #3EB489;
+        font-weight: 700;
+        font-size: 1.1em; 
+     }
+
+     .overlay p{
+        font-size: 0.7em;
+        padding: 0;
+        margin: 0; 
+     }
     .contact_wrapper > div{
         width: 95vw;
         flex-direction: column;
@@ -492,7 +762,101 @@ nav .wrapper .head-icon{
         margin-left: 11px;
     }
 
+    .contact_wrapper .medium .con span{
+        font-size: 1em;
+        margin-left: 7px;
+    }
+
+    .contact_wrapper .medium .con{
+        padding: 13px 20px;
+       
+    }
+
+    .contact_wrapper .medium .con i{
+        font-size: 1.3em;
+    }
+
+    .contact_wrapper > div{
+        width: 95vw;
+      }
+
+
  }
 
 
+/* modal styling */
 
+.main-model{
+    background-image: url('weather.png');
+}
+
+.first-sub{
+    background-image: url('local.jpg');
+}
+
+.second-sub{
+    background-image: url('game.png');
+}
+
+.down-one{
+    background-image: url('article.png');
+}
+
+.down-two{
+    background-image: url('zattix.png');
+}
+
+
+.uk-modal-dialog{
+    background-color: #202020 !important;
+    color: rgb(182, 182, 182);
+}
+
+.uk-close-large{
+    background-color: transparent !important;
+    color: white !important;
+    transition: 400ms !important;
+}
+
+.uk-close-large:hover{
+    background-color: white !important;
+    border-radius: 100%;
+    color: #202020 !important;
+}
+
+.model-btns a{
+     background-color: #3a3a3a;
+     color: #3EB489;
+     padding: 7px 15px;
+     border-radius: 100%;
+     font-size: 2em;
+     transition: 500ms;
+}
+
+.model-btns i{
+    color: #3EB489;
+}
+
+.model-btns a:hover i{
+    color: #e9e9e9; 
+}
+
+.details{
+    text-decoration: none;
+    color: #3a3a3a;
+    font-size: 0.8em;
+    font-weight: 900;
+    background-color: #3EB489;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+.details:hover{
+    color: #3EB489;
+    background-color: #c9c9c9;
+
+}
+
+.uk-button{
+    display: none !important;
+}
