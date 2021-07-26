@@ -14,45 +14,74 @@
  *= require_self
  */
 
- body{
+  body{
     font-family: 'Noto Sans JP', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    width: 100vw;
+    background-color: #262626;
 }
 
+
 nav{
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: 1;
 }
 nav .wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
 }
 
 nav .wrapper .brand{
     font-weight: 900;
-    color: rgb(36, 36, 36);
+    color: white;
     font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-nav .wrapper a{
+nav .wrapper .brand span{
+    font-weight: 900;
+    color: #3EB489;
+    font-size: 2em;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .wrapper a i{
     color: rgb(255, 80, 133);
     text-decoration: none;
     padding-left: 5px;
 }
 
+nav .wrapper .head-icon{
+    color: rgb(214, 214, 214);
+    font-size: 1.5em;
+    margin-left: 13px;
+    transition: 300ms;
+}
+
+nav .wrapper .head-icon:hover{
+    color: #3EB489;
+    font-size: 1.5em;
+    margin-left: 13px;
+}
+
 .header{
     margin: 0;
-    width: 100vw;
+    width: 100%;
     height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('header.png')
+    background-image: url('back.png')
 }
 
 .header .content-wrapper{
@@ -106,127 +135,221 @@ nav .wrapper a{
 .header .content-wrapper p{
     padding: 0;
     margin: 0;
+    color: rgb(221, 221, 221);
+}
+
+.header .content-wrapper #attention{
+    color: #3EB489;
+}
+
+.header .content-wrapper #contact-btn{
+    background-color: #3EB489;
+    padding: 7px 15px;
+    color: #212121;
+    border-radius: 7px;
+    font-weight: 600;
 }
 
 .header .content-wrapper .title{
     margin-bottom: 15px;
 }
 
-.my-works{
-    position: relative;
+.main{
+    margin-top: 100px !important;
+}
+
+#my-projects{
     width: 80vw;
     margin: 0 auto;
-    margin-top: 50px;
+
 }
 
-.project_card{
-    width: 31%;
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    border: 3px solid white;
-    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-    border-radius: 10px;
-    transition: 300ms;
+
+#my-projects .cards-wrapper{
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.project_card:hover{
-    margin-top: 5px;
-}
-
-.project_card .details{
-    width: 100%;
-    background-color: white;
-    height: 20%;
+#my-projects .cards-wrapper .content{
     position: absolute;
-    bottom: 0px;
+    z-index: 3;
+    color: white;
+    align-self: start;
+}
+
+#my-projects .top-cards-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 48%;
+}
+
+#my-projects .top-cards-wrapper #top-main{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cards .overlay{
+    background-color: rgb(29, 29, 29);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    color: white;
+    padding: 70px 30px;
+    box-sizing: border-box;
+    transition: 700ms;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards .overlay:hover{
+    width: 100%;
+}
+
+.cards .overlay:hover .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ .cards .overlay .title{
+   color:  #3EB489;
+   font-weight: 700; 
+}
+
+.cards .overlay .btns{
+   display: none;
+ }
+
+ .cards .overlay .btns a{
+    font-size: 2em;
+    color: #3EB489;
+    margin-right: 10px;
+  }
+
+  .cards .overlay .btns a:hover{
+    color: rgb(221, 221, 221);
+  }
+
+.overlay p{
+    font-size: 0.8em; 
+ }
+
+#my-projects .top-cards-wrapper #top-main img{
+    width: 80%;
+}
+
+#my-projects #subs-wrapper{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+
+#my-projects #subs-wrapper .subs{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects #subs-wrapper .subs img{
+    width: 45%;
+    height: 90%;
+}
+
+#my-projects .down-cards-wrapper{
+    height: 49%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#my-projects .down-cards-wrapper > div{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects .down-cards-wrapper > div img{
+    width: 80%;
+}
+
+#my-projects .cards-wrapper .cards{
+    background-color: #202020;
+    position: relative;
 }
 
 .section_title{
-    text-align: center;
-    border-bottom: 3px solid rgb(255, 80, 133);
-    width: 120px;
-    font-size: 1.3em;
-
+    border-bottom: 3px solid #3EB489;
+    font-size: 1.8em;
+    color: rgb(221, 221, 221);
+    margin: 0 0;
+    padding: 10px;
+    font-weight: 900;
+    margin-bottom: 50px;
 }
 
-.my-works .cards-wrapper{
+.profile-txt{
+    color: rgb(221, 221, 221);
+    margin-bottom: 35px;
+}
+
+.projects-title{
+    width: 320px;  
+}
+
+.about-me-title{
+    width: 150px;
+}
+
+.about-me-wrapper{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.cards-wrapper .first{
-    background-image: url("yolo.png");
-}
-
-.cards-wrapper .second{
-    background-image: url("zatix.png");
-}
-
-.cards-wrapper .third{
-    background-image: url("news.png");
-}
-
-.about_me{
-    display: flex;
-    justify-content: space-between;
     width: 80vw;
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    position: relative;
+    justify-content: space-between;
+    margin-top: 100px;
     flex-wrap: wrap;
 }
 
-.about_me .me{
-    width: 40%;
+.about-me-wrapper .me{
+    width: 45%;
 }
 
-.about_me .resume{
-    background-color: rgb(255, 80, 133);
-    border-radius: 50px;
-    color: white;
-    font-weight: 600;
-    padding: 10px 15px;
-    text-decoration: none;
-    transition: 300ms;
-}
-
-.about_me .resume:hover{
-    margin-left: 5px;
-}
-
-.about_me .tools{
-    width: 50%;
+.about-me-wrapper .tools{
+    width: 53%;
     margin-left: 100px;
 }
 
-.about_me .tools .title{
+.about-me-wrapper .tools .title{
     font-weight: 700;
     padding-bottom: 10px;
+    color: #3EB489;
 }
 
-.about_me .tools .items{
+.about-me-wrapper .tools .items{
     border-bottom: 1px solid rgb(189, 189, 189);
     padding-bottom: 30px;
 }
 
-.about_me .tools .items span{
+.about-me-wrapper .tools .items span{
     padding-right: 10px;
-    color: rgb(255, 80, 133);
+    color: rgb(221, 221, 221);
     
-}
-
-.contact_wrapper{
-    background: rgb(255, 80, 133);
-    border-top-left-radius: 70px;
-    padding: 10px 0;
 }
 
 .contact_wrapper > div{
@@ -234,52 +357,54 @@ nav .wrapper a{
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .contact_wrapper .medium{
     width: 45%;
-    background-color: white;
+    background-color: rgb(29, 29, 29);
     border-radius: 20px;
-    display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    padding-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    transition: 500ms;
+    height: 300px;
 }
 
-.contact_wrapper .medium > div{
+.contact_wrapper .medium:hover{
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    margin-top: 5px;
+}
+
+
+
+.contact_wrapper .medium .con{
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    width: 70%;
     align-items: center;
     margin-bottom: 20px;
-
+    background-color: #262626;
+    padding: 13px 30px;
+    text-decoration: none;
+    color: gray;
 }
 
-.contact_wrapper .medium > div > div{
-   background-color: pink;
-   padding: 30px;
-   margin: 0 auto;
-   margin-right: 20px;
-   border-radius: 100%;
-
+.contact_wrapper .medium .con i{
+    font-size: 1.7em;
 }
 
-
-.contact_wrapper .medium > div > div i{
-    color: rgb(255, 80, 133);
-    font-size: 1.5em;
- }
-
-.contact_wrapper .medium > div span{
-    font-size: 1.3em;
-    font-weight: 600;
-
- }
-
-
+.contact_wrapper .medium .con span{
+    color: #3EB489;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-left: 15px;
+}
 
 .contact_wrapper .contact{
-    width: 45%
+    width: 45%;
+    margin-bottom: 30px
 }
 
 .contact_wrapper .contact form{
@@ -313,15 +438,16 @@ nav .wrapper a{
  .contact_wrapper .contact form textarea:focus{
     outline: none;
     background-color: rgb(253, 218, 228);
+    
  }
 
 
 .contact_wrapper .contact form textarea{
     border: none;
     border-bottom: 2px solid white;
-    height: 100px;
+    height: 70px;
     margin: 10px 0;
-    padding: 10 10px;
+    padding: 10px 10px;
     border-radius: 10px;
  }
 
@@ -333,6 +459,7 @@ nav .wrapper a{
 
  .cta{
      color: white;
+     font-size: 1.2em;
  }
 
  .card-title{
@@ -340,31 +467,279 @@ nav .wrapper a{
      margin-top: 20px;
  }
 
+
+ footer{
+     background-color: rgb(182, 182, 182);
+     width: 100%;
+     height: 50px;
+     color: #262626;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     letter-spacing: 3px;
+     font-weight: 600;
+ }
+
+ @media screen and (min-width: 1024px){
+    .about-me-wrapper .me{
+        width: 45%;
+    }
+
+    .about-me-wrapper .tools{
+        width: 50%;
+        margin-left: 50px;
+    }
+ }
+
+ @media screen and (max-width: 1024px){
+     .header{
+         min-height: 450px;
+     }
+
+     .about-me-wrapper{
+        width: 90vw;
+    }
+
+    .about-me-wrapper .tools{
+        width: 47%;
+        margin-left: 50px;
+    }
+
+    #my-projects{
+        width: 90vw;
+    }
+
+    .contact_wrapper > div {
+        width: 90vw;
+    }
+
+    .contact_wrapper .medium .con i{
+        font-size: 1.5em;
+    }
+
+    .contact_wrapper .medium .con span{
+        font-size: 1.2em;
+        margin-left: 15px;
+    }
+
+ }
+
+ @media screen and (max-width: 768px){
+    .header .content-wrapper .name{
+        font-size: 2.3em;
+        line-height: 1em;
+    }
+    
+    .header .content-wrapper {
+        margin-left: 40px;
+    }
+    
+    .header{
+        min-height: 320px;
+    }
+
+    #my-projects{
+        width: 95vw;
+    }
+
+    .overlay p{
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0; 
+     }
+
+     #my-projects #subs-wrapper .subs img{
+        width: 70%;
+        height: 95;
+    }
+
+    #my-projects .top-cards-wrapper #top-main img{
+        width: 97%;
+    }
+
+    #my-projects .down-cards-wrapper > div img{
+        width: 97%;
+    }
+
+    .about-me-wrapper  {
+        width: 95vw;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .about-me-wrapper .me{
+        width: 45%;
+    }
+
+    .about-me-wrapper  .tools .title{
+        padding-bottom: 0;
+    }
+
+    .about-me-wrapper  .tools .items {
+        padding-bottom: 10px;
+    }
+
+    .about-me-wrapper  .tools{
+        margin-left: 30px;
+    }
+
+    .about-me-wrapper  .tools{
+        width: 50%;
+    }
+
+    .contact_wrapper > div {
+        width: 95vw;
+    }
+
+    .contact_wrapper .medium{
+        width: 48%;
+        height: 300px;
+    }
+
+    .contact_wrapper .medium .con i{
+        font-size: 1.3em;
+    }
+
+    .contact_wrapper .medium .con span{
+        font-size: 1em;
+        margin-left: 15px;
+    }
+
+    .cta{
+       font-size: 1em;
+    }
+ }
+
  @media screen and (max-width: 480px){
 
-    .my-works{
+    nav{
+        margin-top: 0;
+        padding-top: 0;
+        height: 40px;
+    }
+
+    .main{
+        margin-top: 50px !important;
+    }
+   
+    nav .wrapper{
+        margin-top: 0;
+        padding-top: 0;
+        height: 100%;
+        width: 95%;
+        position: relative;
+    }
+
+    
+.header{
+    min-height: 300px;
+    background-image: url('back2.png')
+}
+
+.header .content-wrapper .quote{
+    display: none;
+}
+
+
+.header .content-wrapper .title{
+    font-size: 0.8em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+    .header .content-wrapper .name{
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    .header .content-wrapper #contact-btn{
+        margin-top: 20px;
+    }
+
+    .about-me-wrapper {
         width: 95vw;
     }
 
-    .project_card{
-        width: 100%;
-    }
-
-    .about_me{
-        width: 95vw;
-    }
-
-    .about_me .me{
+    .about-me-wrapper  .me{
         width: 100%;
     }
     
-    .about_me .tools{
+    .about-me-wrapper  .tools{
         width: 100%;
         margin-left: 0;
         margin-top: 40px;
     }
 
+    .section_title{
+        font-size: 1.4em;
+        padding: 10px 0;
+        font-weight: 900;
+    }
+    
+    .projects-title{
+        width: 250px;  
+    }
 
+    #my-projects .top-cards-wrapper{
+        flex-direction: column
+    }
+
+    #my-projects .cards-wrapper{
+        height: auto;
+        flex-direction: column
+    }
+
+    #my-projects #subs-wrapper{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #my-projects #subs-wrapper .subs{
+        height: 230px;
+        margin-bottom: 10px;
+    }
+
+    #my-projects #subs-wrapper .subs img{
+        width: 95%;
+    }
+
+    #my-projects .top-cards-wrapper #top-main{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #my-projects .top-cards-wrapper #top-main img{
+        width: 95%;
+    }
+
+    #my-projects .down-cards-wrapper{
+        flex-direction: column
+    }
+
+    #my-projects .down-cards-wrapper > div{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #my-projects .down-cards-wrapper > div img{
+        width: 95%;
+    }
+
+    #my-projects{
+        width: 95vw;
+    }
+
+    .cards .overlay .title{
+        color:  #3EB489;
+        font-weight: 700;
+        font-size: 1.1em; 
+     }
+
+     .overlay p{
+        font-size: 0.7em;
+        padding: 0;
+        margin: 0; 
+     }
     .contact_wrapper > div{
         width: 95vw;
         flex-direction: column;
@@ -387,7 +762,101 @@ nav .wrapper a{
         margin-left: 11px;
     }
 
+    .contact_wrapper .medium .con span{
+        font-size: 1em;
+        margin-left: 7px;
+    }
+
+    .contact_wrapper .medium .con{
+        padding: 13px 20px;
+       
+    }
+
+    .contact_wrapper .medium .con i{
+        font-size: 1.3em;
+    }
+
+    .contact_wrapper > div{
+        width: 95vw;
+      }
+
+
  }
 
 
+/* modal styling */
 
+.main-model{
+    background-image: url('weather.png');
+}
+
+.first-sub{
+    background-image: url('local.jpg');
+}
+
+.second-sub{
+    background-image: url('game.png');
+}
+
+.down-one{
+    background-image: url('article.png');
+}
+
+.down-two{
+    background-image: url('zattix.png');
+}
+
+
+.uk-modal-dialog{
+    background-color: #202020 !important;
+    color: rgb(182, 182, 182);
+}
+
+.uk-close-large{
+    background-color: transparent !important;
+    color: white !important;
+    transition: 400ms !important;
+}
+
+.uk-close-large:hover{
+    background-color: white !important;
+    border-radius: 100%;
+    color: #202020 !important;
+}
+
+.model-btns a{
+     background-color: #3a3a3a;
+     color: #3EB489;
+     padding: 7px 15px;
+     border-radius: 100%;
+     font-size: 2em;
+     transition: 500ms;
+}
+
+.model-btns i{
+    color: #3EB489;
+}
+
+.model-btns a:hover i{
+    color: #e9e9e9; 
+}
+
+.details{
+    text-decoration: none;
+    color: #3a3a3a;
+    font-size: 0.8em;
+    font-weight: 900;
+    background-color: #3EB489;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+.details:hover{
+    color: #3EB489;
+    background-color: #c9c9c9;
+
+}
+
+.uk-button{
+    display: none !important;
+}
